@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+
+.encabezado {
+    @apply text-2xl text-green-500 mx-2 mb-3
+}
+
+
+@tailwind utilities;
