@@ -1,9 +1,97 @@
 @tailwind base;
 @tailwind components;
 
-.encabezado {
-    @apply text-2xl text-green-500 mx-2 mb-3
+* {
+    margin: 0;
+    padding: 0;
 }
+
+body {
+    background: #eee;
+}
+
+/*Grid Area First Mobile*/
+
+/*min 640px*/
+.contenedor {
+
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, auto);
+    grid-template-areas: "header header header"
+                        "contenido contenido contenido"
+                        "sidebar sidebar sidebar"
+                        "widget-1 widget-1 widget-1"
+                        "widget-2 widget-2 widget-2"
+                        "footer footer footer"
+    ;
+}
+
+.header {
+    grid-area: header;
+}
+
+.contenido {
+    grid-area: contenido;
+}
+
+.sidebar {
+    grid-area: sidebar;
+}
+
+.widget-1 {
+    grid-area: widget-1;
+}
+
+
+.widget-2 {
+    grid-area: widget-2;
+}
+
+.footer {
+    grid-area: footer;
+
+}
+
+/*min 768px*/
+@media screen and (min-width: 768px){
+    .contenedor{
+    grid-template-areas:    "header header header"
+                            "contenido contenido contenido"
+                            "sidebar sidebar sidebar"
+                            "widget-1 widget-1 widget-2"
+                            "footer footer footer"
+    ;
+}    
+}
+
+/*min 1024px*/
+@media screen and (min-width: 1024px){
+    .contenedor{
+    grid-template-areas:    "header header header"
+                            "contenido contenido sidebar"
+                            "widget-1 widget-2 sidebar"
+                            "footer footer footer"
+    ;
+}
+    
+}
+
+/*min 1280px*/
+@media screen and (min-width: 1280px){
+    .contenedor{
+    grid-template-areas:    "header header header"
+                            "contenido contenido sidebar"
+                            "widget-1 widget-1 sidebar"
+                            "widget-2 widget-2 sidebar"
+                            "footer footer footer"
+    ;
+}
+    
+}
+
+/*min 1536px*/
 
 
 @tailwind utilities;

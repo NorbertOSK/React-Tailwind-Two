@@ -1,25 +1,25 @@
 function App() {
   return (
-    <div className="max-w-md mx-auto bg-white rounded-xl shadow-md overflow-hidden md:max-w-2xl mt-5">
-      <div className="md:flex">
-        <div className="md:flex-shrink-0">
-          <img
-            className="h-48 w-full object-cover md:w-48"
-            src="https://images.unsplash.com/photo-1515711660811-48832a4c6f69?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=448&q=80"
-            alt="Man looking at item at a store"
-          ></img>
-        </div>
-        <div className="p-8">
-          <div className="uppercase tracking-wide text-sm text-indigo-500 font-semibold">
-            Card de Prueba
-          </div>
-          <p className="mt-2 text-gray-500">
-            Lorem, ipsum sit amet consectetur adipisicing elit. Deserunt minus excepturi esse dolor sapiente inventore pariatur cupiditate, cum hic non!
-          </p>
-          <h2 class="encabezado">Estilo personalizado en index.css</h2>
-        </div>
+    <>
+      <div className="contenedor w-11/12 max-w-screen-lg m-auto mt-10">
+        <header className="header bg-green-400 p-10 text-white">
+          <h1>Header</h1>
+        </header>
+
+        <main className="contenido bg-white p-10 text-black">
+          <h1>Test</h1>
+          <p>lorem</p>
+        </main>
+
+        <aside className="sidebar bg-yellow-400 p-10 text-black min-h-100 flex items-center justify-center">Sidebar</aside>
+
+        <div className="widget-1 bg-purple-400 p-10 text-white flex items-center justify-center">Widget 1</div>
+        <div className="widget-2 bg-purple-400 p-10 text-white flex items-center justify-center">Widget 2</div>
+
+        <footer className="footer bg-yellow-900 p-10 text-white">Footer</footer>
+
       </div>
-    </div>
+    </>
   );
 }
 
